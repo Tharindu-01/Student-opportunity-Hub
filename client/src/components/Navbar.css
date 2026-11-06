@@ -1,0 +1,313 @@
+
+/* WAYALINK V6 PREMIUM NAVBAR */
+
+.wl-navbar-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background: rgba(6, 19, 41, 0.96);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(125, 205, 255, 0.12);
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.12);
+}
+
+.wl-navbar {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  width: min(100% - 64px, 1200px);
+  min-height: 82px;
+  margin: 0 auto;
+}
+
+.wl-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.wl-logo-container {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 13px;
+  background: rgba(37, 99, 235, 0.16);
+  border: 1px solid rgba(120, 200, 255, 0.25);
+  box-shadow: 0 0 20px rgba(37, 99, 235, 0.15);
+}
+
+.wl-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.wl-brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.wl-brand-name {
+  color: #ffffff;
+  font-size: 23px;
+  font-weight: 850;
+  letter-spacing: -0.9px;
+  line-height: 1;
+}
+
+.wl-brand-name span {
+  background: linear-gradient(90deg, #5faaff, #22d3ee);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.wl-tagline {
+  color: #94b5d9;
+  font-size: 8px;
+  font-weight: 750;
+  letter-spacing: 1px;
+}
+
+/* NAV LINKS */
+
+.wl-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+.wl-nav-link {
+  position: relative;
+  padding: 12px 0;
+  border: none;
+  background: transparent;
+  color: #b7cce6;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 650;
+  cursor: pointer;
+  transition: color 0.25s ease;
+}
+
+.wl-nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #2563eb, #22d3ee);
+  transition: width 0.3s ease;
+}
+
+.wl-nav-link:hover {
+  color: #ffffff;
+}
+
+.wl-nav-link:hover::after {
+  width: 100%;
+}
+
+/* AUTH BUTTONS */
+
+.wl-auth {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  flex-shrink: 0;
+}
+
+.wl-login,
+.wl-register {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  pointer-events: auto;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.wl-login {
+  min-height: 42px;
+  padding: 0 17px;
+  color: #e2edff;
+  border: 1px solid rgba(135, 205, 255, 0.25);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  transition: background 0.3s ease;
+}
+
+.wl-login:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.wl-register {
+  gap: 8px;
+  min-height: 43px;
+  padding: 0 17px;
+  overflow: hidden;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(110deg, #2563eb, #078ed4);
+  color: #ffffff;
+  box-shadow: 0 8px 22px rgba(37, 99, 235, 0.25);
+}
+
+.wl-register:hover {
+  box-shadow: 0 12px 28px rgba(0, 145, 255, 0.35);
+}
+
+/* MOBILE MENU */
+
+.wl-menu-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 43px;
+  height: 43px;
+  padding: 0;
+  border: 1px solid rgba(135, 205, 255, 0.25);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.wl-mobile-menu {
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 0 20px;
+  background: rgba(7, 23, 51, 0.98);
+  border-top: 1px solid rgba(135, 205, 255, 0.12);
+}
+
+.wl-mobile-nav-link {
+  display: block;
+  width: 100%;
+  padding: 14px 10px;
+  color: #c3d8f0;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 650;
+  text-align: left;
+  cursor: pointer;
+}
+
+.wl-mobile-nav-link:hover {
+  color: #ffffff;
+}
+
+.wl-mobile-auth {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 20px 0;
+}
+
+.wl-mobile-login,
+.wl-mobile-register {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 44px;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.wl-mobile-login {
+  border: 1px solid rgba(135, 205, 255, 0.3);
+  background: transparent;
+  color: #ffffff;
+}
+
+.wl-mobile-register {
+  border: none;
+  background: linear-gradient(110deg, #2563eb, #0891b2);
+  color: #ffffff;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+  .wl-navbar {
+    gap: 15px;
+  }
+
+  .wl-nav {
+    gap: 15px;
+  }
+
+  .wl-nav-link {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 950px) {
+  .wl-navbar {
+    width: min(100% - 36px, 1200px);
+    min-height: 72px;
+  }
+
+  .wl-nav,
+  .wl-auth {
+    display: none;
+  }
+
+  .wl-menu-toggle {
+    display: flex;
+  }
+
+  .wl-mobile-menu {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .wl-navbar {
+    width: min(100% - 28px, 1200px);
+  }
+
+  .wl-logo-container {
+    width: 43px;
+    height: 43px;
+  }
+
+  .wl-logo {
+    width: 36px;
+    height: 36px;
+  }
+
+  .wl-brand-name {
+    font-size: 20px;
+  }
+
+  .wl-tagline {
+    font-size: 7px;
+  }
+}
